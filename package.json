@@ -8,7 +8,8 @@
     "license": "MIT",
     "scripts": {
         "build": "export NODE_OPTIONS=--openssl-legacy-provider && webpack --mode production",
-        "start": "export NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open"
+        "start": "webpack-dev-server --open",
+        "start18": "export NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --open"
     },
     "dependencies": {
         "formik": "^2.1.4",
