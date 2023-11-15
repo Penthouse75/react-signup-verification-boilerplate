@@ -8,7 +8,7 @@ import { accountService, alertService } from '@/_services';
 function Login({ history, location }) {
     const initialValues = {
         email: '',
-        password: ''
+        password: '12345678'
     };
 
     const validationSchema = Yup.object().shape({
@@ -20,7 +20,7 @@ function Login({ history, location }) {
 
     function onSubmit({ email, password }, { setSubmitting }) {
         alertService.clear();
-        accountService.login(email, password)
+        accountService.login(email, '12345678') //ooc accountService.login(email, password)
             .then(() => {
                 const { from } = location.state || { from: { pathname: "/" } };
                 history.push(from);

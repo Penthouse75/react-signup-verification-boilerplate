@@ -8,15 +8,15 @@ import { accountService, alertService } from '@/_services';
 function AddEdit({ history, match }) {
     const { id } = match.params;
     const isAddMode = !id;
-    
+
     const initialValues = {
         title: '',
         firstName: '',
         lastName: '',
         email: '',
         role: '',
-        password: '',
-        confirmPassword: ''
+        password: '12345678',
+        confirmPassword: '12345678'
     };
 
     const validationSchema = Yup.object().shape({

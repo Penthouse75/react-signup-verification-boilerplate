@@ -7,13 +7,13 @@ import { accountService, alertService } from '@/_services';
 
 function Register({ history }) {
     const initialValues = {
-        title: '',
-        firstName: '',
-        lastName: '',
+        title: 'Mr',
+        firstName: 'John',
+        lastName: 'Doe',
         email: '',
-        password: '',
-        confirmPassword: '',
-        acceptTerms: false
+        password: '12345678',
+        confirmPassword: '12345678',
+        acceptTerms: true
     };
 
     const validationSchema = Yup.object().shape({

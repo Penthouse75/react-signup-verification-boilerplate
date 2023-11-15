@@ -12,8 +12,8 @@ function Update({ history }) {
         firstName: user.firstName,
         lastName: user.lastName,
         email: user.email,
-        password: '',
-        confirmPassword: ''
+        password: '12345678',
+        confirmPassword: '12345678'
     };
 
     const validationSchema = Yup.object().shape({
