@@ -10,11 +10,11 @@ function AddEdit({ history, match }) {
     const isAddMode = !id;
 
     const initialValues = {
-        title: '',
+        title: 'Mr',
         firstName: '',
         lastName: '',
         email: '',
-        role: '',
+        role: 'User',
         password: '12345678',
         confirmPassword: '12345678'
     };

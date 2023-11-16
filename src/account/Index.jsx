@@ -20,8 +20,8 @@ function Account({ history, match }) {
     }, []);
 
     return (
-        <div className="container">
-            <div className="row">
+        <div className="container">    
+            <div className="row"> 
                 <div className="col-sm-8 offset-sm-2 mt-5">
                     <div className="card m-3">
                         <Switch>

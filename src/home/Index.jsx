@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Tree from '../tree/Tree'
 import { accountService } from '@/_services';
 
 function Home() {
@@ -8,8 +8,8 @@ function Home() {
     return (
         <div className="p-4">
             <div className="container">
-                <h1>Hi {user.firstName}!</h1>
-                <p>You're logged in with React & JWT!!</p>
+                <h1>Здравствуйте, {user.firstName}!</h1>
+                {/* <Tree /> */}
             </div>
         </div>
     );
