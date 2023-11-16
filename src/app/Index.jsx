@@ -9,8 +9,10 @@ import { Profile } from '@/profile';
 import { Admin } from '@/admin';
 import { Account } from '@/account';
 
+import FileUpload from "../components/FilesUpload"
+
 function App() {
-    const { pathname } = useLocation();  
+    const { pathname } = useLocation();
     const [user, setUser] = useState({});
 
     useEffect(() => {
@@ -30,6 +32,7 @@ function App() {
                 <Route path="/account" component={Account} />
                 <Redirect from="*" to="/" />
             </Switch>
+            <FileUpload />
         </div>
     );
 }

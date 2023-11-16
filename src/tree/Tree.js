@@ -6,7 +6,7 @@ function Tree() {
     const [file, setFile] = useState();
     const [fileUploaded, setFileUploaded] = useState();
 
-    const handleFileChange = (e: ChangeEvent) => {
+    const handleFileChange = (e) => {
         setFile(e.target.files);
     };
 
