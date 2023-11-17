@@ -30,7 +30,7 @@ const UploadFiles = () => {
             .then(() => {
                 setMessage((prevMessage) => ([
                     ...prevMessage,
-                    "Uploaded the file successfully: " + file.name,
+                    "Файлы успешно загруженные: " + file.name,
                 ]));
             })
             .catch(() => {
@@ -39,7 +39,7 @@ const UploadFiles = () => {
 
                 setMessage((prevMessage) => ([
                     ...prevMessage,
-                    "Could not upload the file: " + file.name,
+                    "Не могу загрузить файлы: " + file.name,
                 ]));
             });
     };
@@ -66,15 +66,34 @@ const UploadFiles = () => {
 
     return (
         <>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            <div className="row my-12">
+                <div className="col-11">
+                    <label className="btn btn-default p-0">
+                        <input type="file" multiple onChange={selectFiles} />
+                    </label>
                 </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" />
-                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+
+                <div className="col-1">
+                    <button
+                        className="btn btn-success btn-sm float-sm-right"
+                        disabled={!selectedFiles}
+                        onClick={uploadFiles}
+                    >
+                        Загрузить
+                    </button>
                 </div>
             </div>
+
+            {message.length > 0 && (
+                <div className="alert alert-secondary" role="alert">
+                    <ul>
+                        {message.map((item, i) => {
+                            return <li key={i}>{item}</li>;
+                        })}
+                    </ul>
+                </div>
+            )}
+
 
         </>
     )
